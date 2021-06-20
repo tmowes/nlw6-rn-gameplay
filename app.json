@@ -1,0 +1,12 @@
+{
+  "name": "nlw-rn",
+  "displayName": "nlw-rn",
+  "expo": {
+    "name": "nlw-rn",
+    "slug": "nlw-rn",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
