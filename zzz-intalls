@@ -1,0 +1,18 @@
+expo init nlw-rn
+>bare >minimal (typescript)
+
+npx install-peerdeps --dev @lukemorales/eslint-config -Y
+
+yarn add @react-navigation/native react-native-safe-area-context @react-navigation/stack @react-navigation/bottom-tabs
+
+expo install @expo/vector-icons @react-native-community/datetimepicker react-native-svg lottie-react-native @react-native-async-storage/async-storage expo-linear-gradient expo-app-loading expo-linking @react-native-community/masked-view
+
+yarn add axios date-fns intl react-native-iphone-x-helper react-native-redash react-native-responsive-fontsize
+
+yarn add -D react-native-svg-transformer
+
+
+## styled-components
+yarn add styled-components react-is@16.13.1
+yarn add -D @types/styled-components @types/styled-components-react-native babel-plugin-styled-components
+"plugins": ["babel-plugin-styled-components"]
