@@ -2,10 +2,12 @@ import { StyleSheet } from 'react-native'
 
 import { RFValue } from 'react-native-responsive-fontsize'
 
+import { colors } from '../../styles/colors'
+
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: colors.bgColor,
     alignItems: 'center',
     justifyContent: 'center',
   },
