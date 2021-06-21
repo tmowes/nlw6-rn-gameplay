@@ -11,14 +11,15 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "backgroundColor": "#0E1647"
+      "resizeMode": "contain",
+      "backgroundColor": "#070B24"
     },
     "description": ""
   },
   "android": {
     "adaptiveIcon": {
       "foregroundImage": "./assets/adaptive-icon.png",
-      "backgroundColor": "#0E1647"
+      "backgroundColor": "#070B24"
     }
   }
 }

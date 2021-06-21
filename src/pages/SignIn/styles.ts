@@ -11,18 +11,24 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  button: {
-    width: '80%',
-    height: RFValue(56),
-    borderRadius: RFValue(8),
-    backgroundColor: colors.primary,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 16,
+  image: {
+    width: '100%',
   },
-  text: {
-    color: 'white',
-    fontSize: 22,
+  content: {
+    marginTop: -80,
+    paddingHorizontal: 48,
+  },
+  title: {
+    color: colors.text,
+    fontSize: 40,
     fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 24,
+  },
+  body: {
+    color: colors.body,
+    fontSize: 17,
+    textAlign: 'center',
+    marginBottom: 48,
   },
 })

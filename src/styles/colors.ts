@@ -9,5 +9,6 @@ export const colors = {
   success: '#32BD50',
   primary: '#E51C44',
   secondary: '#495BCC',
-  bgColor: '#0E1647',
+  bgColor: '#00143D',
+  line: '#991F36',
 }
