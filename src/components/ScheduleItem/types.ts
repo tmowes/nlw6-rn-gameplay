@@ -5,7 +5,7 @@ import { RectButtonProps } from 'react-native-gesture-handler'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 export type LabelButtonProps = RectButtonProps & {
-  label?: string
+  label: string
   name?: ComponentProps<typeof MaterialCommunityIcons>['name']
   addStyle?: StyleProp<ViewStyle>
 }

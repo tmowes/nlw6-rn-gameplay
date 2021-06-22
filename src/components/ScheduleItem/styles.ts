@@ -12,14 +12,14 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     flexDirection: 'row',
     alignItems: 'center',
-    elevation: 2,
+    elevation: 6,
   },
   iconContainer: {
     width: RFValue(56),
     height: RFValue(56),
     alignItems: 'center',
     justifyContent: 'center',
-
+    borderRightWidth: 2,
     borderRightColor: colors.line,
   },
   text: {

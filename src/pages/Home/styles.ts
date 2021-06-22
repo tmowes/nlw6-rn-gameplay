@@ -1,28 +1,42 @@
 import { StyleSheet } from 'react-native'
 
 import { RFValue } from 'react-native-responsive-fontsize'
-
-import { colors } from '../../styles/colors'
+import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.bgColor,
     alignItems: 'center',
-    justifyContent: 'center',
   },
-  button: {
-    width: '80%',
+  header: {
+    width: '100%',
+    paddingTop: RFValue(getStatusBarHeight() + 16),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: RFValue(16),
+    marginBottom: RFValue(24),
+  },
+  info: {
+    flex: 1,
+    width: '100%',
+    marginLeft: RFValue(8),
+  },
+  plus: {
+    width: RFValue(56),
     height: RFValue(56),
-    borderRadius: RFValue(56 / 2),
-    backgroundColor: 'orangered',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 16,
+    borderRadius: RFValue(8),
   },
-  text: {
-    color: 'white',
-    fontSize: 22,
-    fontWeight: 'bold',
+  avatar: {
+    width: RFValue(56),
+    height: RFValue(56),
+    borderRadius: RFValue(8),
+  },
+  content: {
+    width: '100%',
+    marginTop: RFValue(24),
+  },
+  matches: {
+    marginTop: RFValue(24),
+    marginLeft: RFValue(24),
   },
 })

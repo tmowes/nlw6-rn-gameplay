@@ -1,12 +1,14 @@
 import React, { useCallback } from 'react'
 import { SafeAreaView, Image, Text, useWindowDimensions, View } from 'react-native'
 
+import { useNavigation } from '@react-navigation/native'
+
 import * as C from '../../components'
 import illustrationImg from '../../assets/illustration.png'
 import { styles } from './styles'
 
 export const SignIn = () => {
-  const { width } = useWindowDimensions()
+  const { navigate } = useNavigation()
 
   return (
     <SafeAreaView style={styles.container}>
@@ -16,7 +18,11 @@ export const SignIn = () => {
         <Text style={styles.body}>
           {`Crie grupos para jogar seus games\nfavoritos com seus amigos\n`}
         </Text>
-        <C.LabelButton label="Entrar com Discord" name="discord" />
+        <C.LabelButton
+          label="Entrar com Discord"
+          name="discord"
+          onPress={() => navigate('Home')}
+        />
       </View>
     </SafeAreaView>
   )

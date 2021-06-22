@@ -9,7 +9,7 @@ const { Navigator, Screen } = createStackNavigator()
 
 export const AppRoutes = () => (
   <Navigator headerMode="none" screenOptions={stackScreenOptions}>
+    <Screen name="Home" component={P.Home} />
     <Screen name="SignIn" component={P.SignIn} />
-    {/* <Screen name="Home" component={P.Home} /> */}
   </Navigator>
 )

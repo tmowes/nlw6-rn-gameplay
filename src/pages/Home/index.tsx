@@ -1,33 +1,40 @@
-import React, { useCallback } from 'react'
-import { SafeAreaView, Text, useWindowDimensions, View } from 'react-native'
+import React, { useCallback, useState } from 'react'
+import { FlatList, SafeAreaView, View } from 'react-native'
 
-import { RFValue } from 'react-native-responsive-fontsize'
-import * as Linking from 'expo-linking'
-import { RectButton } from 'react-native-gesture-handler'
-
-import LogoSVG from '../../assets/nlw.svg'
+import * as C from '../../components'
+import { appointments } from './data'
 import { styles } from './styles'
 
 export const Home = () => {
-  const { width } = useWindowDimensions()
+  const [category, setCategory] = useState('')
 
-  const handleInvite = useCallback(() => {
-    Linking.openURL('https://nextlevelweek.com/convite/tmowes/6')
-  }, [])
-
-  const handleLinkSchedule = useCallback(() => {
-    Linking.openURL('https://nextlevelweek.com/cronograma/6')
-  }, [])
+  const categorySelection = useCallback(
+    (id: string) => {
+      category === id ? setCategory('') : setCategory(id)
+    },
+    [category],
+  )
 
   return (
     <SafeAreaView style={styles.container}>
-      <LogoSVG width={RFValue(width * 0.8)} />
-      <RectButton style={styles.button} onPress={handleInvite}>
-        <Text style={styles.text}>Inscreva-se</Text>
-      </RectButton>
-      <RectButton style={styles.button} onPress={handleLinkSchedule}>
-        <Text style={styles.text}>Veja o cronograma</Text>
-      </RectButton>
+      <View style={styles.header}>
+        <C.Profile />
+        <C.LabelButton name="plus" addStyle={styles.plus} />
+      </View>
+      <View>
+        <C.CategoryList selectedId={category} categorySelection={categorySelection} />
+      </View>
+      <View style={styles.content}>
+        <C.ListHeader title="Partidas agendadas" subtitle="Total 6" />
+        <FlatList
+          data={appointments}
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }) => <C.AppointmentItem data={item} />}
+          ItemSeparatorComponent={() => <C.Divider />}
+          style={styles.matches}
+          showsVerticalScrollIndicator={false}
+        />
+      </View>
     </SafeAreaView>
   )
 }

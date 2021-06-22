@@ -7,28 +7,30 @@ import { colors } from '../../styles/colors'
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.bgColor,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingVertical: RFValue(48),
   },
   image: {
     width: '100%',
   },
   content: {
-    marginTop: -80,
-    paddingHorizontal: 48,
+    flex: 1,
+    marginTop: RFValue(-48),
+    paddingHorizontal: RFValue(48),
+    justifyContent: 'space-between',
   },
   title: {
     color: colors.text,
-    fontSize: 40,
+    fontSize: RFValue(36),
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 24,
+    marginBottom: RFValue(24),
   },
   body: {
-    color: colors.body,
-    fontSize: 17,
+    color: colors.highlight,
+    fontSize: RFValue(16),
     textAlign: 'center',
-    marginBottom: 48,
+    marginBottom: 'auto',
   },
 })
