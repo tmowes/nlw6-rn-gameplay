@@ -8,5 +8,6 @@ export type CategoryItemProps = RectButtonProps & {
   label: string
   icon: FC<SvgProps>
   isSelected: boolean
+  hasCheckBox: boolean
   addStyle?: StyleProp<ViewStyle>
 }

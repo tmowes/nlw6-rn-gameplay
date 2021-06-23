@@ -6,10 +6,12 @@ import { colors, fonts } from '../../styles'
 
 export const styles = StyleSheet.create({
   container: {
+    width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: RFValue(16),
+    marginVertical: RFValue(16),
   },
   title: {
     color: colors.text,

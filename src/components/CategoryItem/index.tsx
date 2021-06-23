@@ -10,16 +10,28 @@ import { CategoryItemProps } from './types'
 import { colors } from '../../styles'
 
 export const CategoryItem = (props: CategoryItemProps) => {
-  const { label, icon: Icon, isSelected = false, addStyle = {}, ...attrs } = props
+  const {
+    label,
+    icon: Icon,
+    isSelected = false,
+    hasCheckBox,
+    addStyle = {},
+    ...attrs
+  } = props
 
   return (
     <LinearGradient style={[styles.container, addStyle]} colors={colors.inputGradient}>
       <RectButton style={styles.button} {...attrs}>
-        <View style={[styles.content, { opacity: isSelected ? 1 : 0.5 }]}>
-          <View style={isSelected ? styles.selected : styles.deselected} />
+        <LinearGradient
+          style={[styles.content, { opacity: isSelected ? 1 : 0.5 }]}
+          colors={colors.selectGradient}
+        >
+          {hasCheckBox && (
+            <View style={isSelected ? styles.selected : styles.deselected} />
+          )}
           <Icon height={RFValue(48)} width={RFValue(48)} />
           <Text style={styles.text}>{label}</Text>
-        </View>
+        </LinearGradient>
       </RectButton>
     </LinearGradient>
   )

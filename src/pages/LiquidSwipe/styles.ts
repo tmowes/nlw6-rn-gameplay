@@ -33,8 +33,10 @@ export const styles = StyleSheet.create({
   },
   content: {
     width: '100%',
+    marginTop: RFValue(24),
   },
   matches: {
+    marginTop: RFValue(24),
     marginLeft: RFValue(24),
   },
 })

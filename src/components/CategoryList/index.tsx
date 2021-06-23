@@ -9,7 +9,13 @@ import { styles } from './styles'
 import { CategoryListProps } from './types'
 
 export const CategoryList = (props: CategoryListProps) => {
-  const { selectedId, categorySelection, addStyle = {}, ...attrs } = props
+  const {
+    selectedId,
+    categorySelection,
+    addStyle = {},
+    hasCheckBox = false,
+    ...attrs
+  } = props
 
   return (
     <ScrollView
@@ -25,6 +31,7 @@ export const CategoryList = (props: CategoryListProps) => {
           icon={icon}
           isSelected={selectedId === id}
           onPress={() => categorySelection(id)}
+          hasCheckBox={hasCheckBox}
         />
       ))}
     </ScrollView>

@@ -6,4 +6,5 @@ export type CategoryListProps = RectButtonProps & {
   selectedId: string
   categorySelection: (id: string) => void
   addStyle?: StyleProp<ViewStyle>
+  hasCheckBox?: boolean
 }

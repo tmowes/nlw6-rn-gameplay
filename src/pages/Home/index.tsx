@@ -1,11 +1,14 @@
 import React, { useCallback, useState } from 'react'
 import { FlatList, SafeAreaView, View } from 'react-native'
 
+import { useNavigation } from '@react-navigation/native'
+
 import * as C from '../../components'
 import { appointments } from './data'
 import { styles } from './styles'
 
 export const Home = () => {
+  const { navigate } = useNavigation()
   const [category, setCategory] = useState('')
 
   const categorySelection = useCallback(
@@ -19,7 +22,11 @@ export const Home = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <C.Profile />
-        <C.LabelButton name="plus" addStyle={styles.plus} />
+        <C.LabelButton
+          name="plus"
+          addStyle={styles.plus}
+          onPress={() => navigate('AppointmentCreate')}
+        />
       </View>
       <View>
         <C.CategoryList selectedId={category} categorySelection={categorySelection} />
@@ -29,7 +36,12 @@ export const Home = () => {
         <FlatList
           data={appointments}
           keyExtractor={({ id }) => id}
-          renderItem={({ item }) => <C.AppointmentItem data={item} />}
+          renderItem={({ item }) => (
+            <C.AppointmentItem
+              data={item}
+              onPress={() => navigate('Appointments', { ...item })}
+            />
+          )}
           ItemSeparatorComponent={() => <C.Divider />}
           style={styles.matches}
           showsVerticalScrollIndicator={false}
