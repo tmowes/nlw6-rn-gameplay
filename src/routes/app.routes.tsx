@@ -10,8 +10,8 @@ const { Navigator, Screen } = createStackNavigator()
 export const AppRoutes = () => (
   <Navigator headerMode="none" screenOptions={stackScreenOptions}>
     {/* <Screen name="LiquidSwipe" component={P.LiquidSwipe} /> */}
-    <Screen name="Home" component={P.Home} />
     <Screen name="AppointmentCreate" component={P.AppointmentCreate} />
+    <Screen name="Home" component={P.Home} />
     <Screen name="Appointments" component={P.Appointments} />
     <Screen name="SignIn" component={P.SignIn} />
   </Navigator>

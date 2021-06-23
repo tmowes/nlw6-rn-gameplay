@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+  scroll: {
+    width: '100%',
+  },
   form: {
     width: '100%',
     paddingHorizontal: RFValue(16),
@@ -23,6 +26,7 @@ export const styles = StyleSheet.create({
     height: RFValue(56),
     borderRadius: RFValue(8),
     overflow: 'hidden',
+    marginBottom: RFValue(16),
   },
   image: {
     width: RFValue(56),
@@ -41,5 +45,24 @@ export const styles = StyleSheet.create({
     color: colors.text,
     fontSize: RFValue(18),
     fontFamily: fonts.heading,
+  },
+  fieldsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  inputRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  divider: {
+    color: colors.highlight,
+    fontSize: RFValue(18),
+    fontFamily: fonts.complement,
+    marginHorizontal: RFValue(4),
+  },
+  footer: {
+    marginVertical: RFValue(20),
+    marginBottom: RFValue(56),
   },
 })

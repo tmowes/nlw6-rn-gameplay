@@ -18,12 +18,11 @@ export const Routes = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 200)
+    }, 600)
   }, [])
 
   if (isLoading && !fontsLoaded) {
     return <AppLoading />
   }
-
   return <AppRoutes />
 }
