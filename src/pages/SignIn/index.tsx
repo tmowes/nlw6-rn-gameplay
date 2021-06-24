@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react'
-import { SafeAreaView, Image, Text, useWindowDimensions, View } from 'react-native'
+import React from 'react'
+import { SafeAreaView, Image, Text, View } from 'react-native'
 import { Alert } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'

@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#070B24"
-      }
+      },
+      "package": "com.tmowes.nlwrn"
     }
   }
 }

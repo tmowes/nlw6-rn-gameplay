@@ -1,4 +1,4 @@
-rootProject.name = 'nlwrn'
+rootProject.name = 'nlw-rn'
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()
