@@ -1,14 +1,25 @@
 import React, { useCallback } from 'react'
 import { SafeAreaView, Image, Text, useWindowDimensions, View } from 'react-native'
+import { Alert } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
 
 import * as C from '../../components'
 import illustrationImg from '../../assets/illustration.png'
 import { styles } from './styles'
+import { useAuth } from '../../contexts'
 
 export const SignIn = () => {
-  const { navigate } = useNavigation()
+  const { user, signIn } = useAuth()
+
+  const handleSignIn = async () => {
+    try {
+      await signIn()
+    } catch (error) {
+      console.log(error)
+      Alert.alert('Não foi possivel autenticar')
+    }
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -21,7 +32,7 @@ export const SignIn = () => {
         <C.LabelButton
           label="Entrar com Discord"
           name="discord"
-          onPress={() => navigate('Home')}
+          onPress={handleSignIn}
         />
       </View>
     </SafeAreaView>

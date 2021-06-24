@@ -10,6 +10,14 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  linear: {
+    width: RFValue(58),
+    height: RFValue(58),
+    borderRadius: RFValue(8),
+    marginRight: RFValue(16),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   content: {
     flex: 1,
   },
@@ -29,7 +37,6 @@ export const styles = StyleSheet.create({
     fontFamily: fonts.text,
     fontSize: RFValue(13),
     color: colors.highlight,
-    marginRight: RFValue(16),
   },
   footer: {
     width: '100%',
@@ -55,6 +62,5 @@ export const styles = StyleSheet.create({
     fontSize: RFValue(13),
     color: colors.text,
     marginLeft: RFValue(8),
-    marginRight: RFValue(16),
   },
 })

@@ -6,7 +6,6 @@ import { colors, fonts } from '../../styles'
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
   },
   scroll: {
@@ -18,15 +17,18 @@ export const styles = StyleSheet.create({
     marginVertical: RFValue(16),
   },
   select: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
+    height: RFValue(56),
     borderWidth: 1,
     borderColor: colors.secondary50,
-    height: RFValue(56),
     borderRadius: RFValue(8),
-    overflow: 'hidden',
     marginBottom: RFValue(16),
+    overflow: 'hidden',
+  },
+  button: {
+    width: '100%',
+    height: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   image: {
     width: RFValue(56),
@@ -41,7 +43,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   label: {
-    flex: 1,
     color: colors.text,
     fontSize: RFValue(18),
     fontFamily: fonts.heading,
@@ -54,15 +55,15 @@ export const styles = StyleSheet.create({
   inputRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: RFValue(8),
   },
   divider: {
     color: colors.highlight,
     fontSize: RFValue(18),
     fontFamily: fonts.complement,
-    marginHorizontal: RFValue(4),
+    marginHorizontal: RFValue(8),
   },
   footer: {
-    marginVertical: RFValue(20),
-    marginBottom: RFValue(56),
+    marginTop: RFValue(24),
   },
 })

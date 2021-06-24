@@ -1,0 +1,5 @@
+export const REDIRECT_URI = 'https://auth.expo.io/nlw-rn'
+export const SCOPE = 'identify%20email%20connections%20guilds'
+export const RESPONSE_TYPE = 'token'
+export const CLIENT_ID = '857427319584325652'
+export const CDN_IMAGE = 'https://cdn.discordapp.com'

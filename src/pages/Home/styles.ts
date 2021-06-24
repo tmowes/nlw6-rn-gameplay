@@ -31,10 +31,11 @@ export const styles = StyleSheet.create({
     height: RFValue(56),
     borderRadius: RFValue(8),
   },
-  content: {
+  list: {
     width: '100%',
+    paddingHorizontal: RFValue(16),
   },
-  matches: {
-    marginLeft: RFValue(24),
+  listOffset: {
+    paddingBottom: 64,
   },
 })

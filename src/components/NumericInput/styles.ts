@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
     height: RFValue(48),
     borderRadius: RFValue(8),
     backgroundColor: colors.secondary40,
+    borderWidth: RFValue(1),
+    borderColor: colors.secondary30,
     color: colors.text,
     fontSize: RFValue(13),
     fontFamily: fonts.text,

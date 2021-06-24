@@ -2,15 +2,11 @@ import { StyleProp, ViewStyle } from 'react-native'
 
 import { RectButtonProps } from 'react-native-gesture-handler'
 
+import { GuildProps } from '../GuildItem/types'
+
 export type AppointmentItemProps = RectButtonProps & {
   addStyle?: StyleProp<ViewStyle>
   data: AppointmentProps
-}
-export type GuildProps = {
-  id: string
-  name: string
-  icon: null
-  owner: boolean
 }
 
 export type AppointmentProps = {

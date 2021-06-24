@@ -7,6 +7,6 @@ export const styles = StyleSheet.create({
     width: RFValue(56),
     height: RFValue(56),
     borderRadius: RFValue(8),
-    marginRight: RFValue(16),
+    // marginRight: RFValue(16),
   },
 })

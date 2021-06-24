@@ -6,14 +6,17 @@ import { NavigationContainer } from '@react-navigation/native'
 
 import { Routes } from './routes'
 import { LinearBackground } from './components'
+import { AppProvider } from './contexts'
 
 export const AppSrc = () => (
   <SafeAreaProvider>
     <NavigationContainer>
-      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-      <LinearBackground>
-        <Routes />
-      </LinearBackground>
+      <AppProvider>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+        <LinearBackground>
+          <Routes />
+        </LinearBackground>
+      </AppProvider>
     </NavigationContainer>
   </SafeAreaProvider>
 )

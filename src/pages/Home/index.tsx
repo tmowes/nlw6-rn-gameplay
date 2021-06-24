@@ -31,22 +31,21 @@ export const Home = () => {
       <View>
         <C.CategoryList selectedId={category} categorySelection={categorySelection} />
       </View>
-      <View style={styles.content}>
-        <C.ListHeader title="Partidas agendadas" subtitle="Total 6" />
-        <FlatList
-          data={appointments}
-          keyExtractor={({ id }) => id}
-          renderItem={({ item }) => (
-            <C.AppointmentItem
-              data={item}
-              onPress={() => navigate('Appointments', { ...item })}
-            />
-          )}
-          ItemSeparatorComponent={() => <C.Divider />}
-          style={styles.matches}
-          showsVerticalScrollIndicator={false}
-        />
-      </View>
+      <C.ListHeader title="Partidas agendadas" subtitle="Total 6" />
+      <FlatList
+        data={appointments}
+        keyExtractor={({ id }) => id}
+        renderItem={({ item }) => (
+          <C.AppointmentItem
+            data={item}
+            onPress={() => navigate('Appointments', { ...item })}
+          />
+        )}
+        ItemSeparatorComponent={() => <C.Divider />}
+        contentContainerStyle={styles.listOffset}
+        style={styles.list}
+        showsVerticalScrollIndicator={false}
+      />
     </SafeAreaView>
   )
 }

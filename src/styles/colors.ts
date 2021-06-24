@@ -6,6 +6,8 @@ export const colors = {
   inputGradient: ['#243189', '#1B2565'],
   selectGradient: ['#171F52', '#243189'],
   headerGradient: ['#0A1033', '#1D2766'],
+  overlay: '#00000080',
+  modalGradient: ['#00000080', 'black'],
   text: '#DDE3F0',
   highlight: '#ABB1CC',
   on: '#32BD50',

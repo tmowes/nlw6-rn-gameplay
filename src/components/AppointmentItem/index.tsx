@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View } from 'react-native'
 
 import { RectButton } from 'react-native-gesture-handler'
+import { LinearGradient } from 'expo-linear-gradient'
 
 import PlayerSvg from '../../assets/player.svg'
 import CalendarSvg from '../../assets/calendar.svg'
@@ -20,7 +21,9 @@ export const AppointmentItem = (props: AppointmentItemProps) => {
   return (
     <RectButton {...attrs}>
       <View style={[styles.container, addStyle]}>
-        <GuildIcon />
+        <LinearGradient style={styles.linear} colors={colors.inputGradient}>
+          <GuildIcon />
+        </LinearGradient>
         <View style={styles.content}>
           <View style={styles.header}>
             <Text style={styles.title}>{name}</Text>

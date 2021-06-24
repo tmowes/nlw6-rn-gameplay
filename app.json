@@ -5,21 +5,22 @@
     "name": "nlw-rn",
     "slug": "nlw-rn",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "icon": "./assets/icon.png",
+    "scheme": "nlw-rn",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#070B24"
     },
-    "description": ""
-  },
-  "android": {
-    "adaptiveIcon": {
-      "foregroundImage": "./assets/adaptive-icon.png",
-      "backgroundColor": "#070B24"
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "description": "",
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#070B24"
+      }
     }
   }
 }
