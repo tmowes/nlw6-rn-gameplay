@@ -35,6 +35,7 @@ export const styles = StyleSheet.create({
   footer: {
     width: '100%',
     paddingHorizontal: RFValue(16),
+    marginTop: RFValue(16),
     marginBottom: RFValue(getBottomSpace() + 16),
   },
 })

@@ -16,18 +16,18 @@ export const AppointmentItem = (props: AppointmentItemProps) => {
   const { data, addStyle = {}, ...attrs } = props
   const [category] = categories.filter(item => item.id === data.category)
   const { guild, date, description } = data
-  const { owner, name } = guild
+  const { owner, name, id, icon } = guild
 
   return (
     <RectButton {...attrs}>
       <View style={[styles.container, addStyle]}>
         <LinearGradient style={styles.linear} colors={colors.inputGradient}>
-          <GuildIcon />
+          <GuildIcon iconId={icon} guildId={id} />
         </LinearGradient>
         <View style={styles.content}>
           <View style={styles.header}>
             <Text style={styles.title}>{name}</Text>
-            <Text style={styles.category}>{category.label}</Text>
+            <Text style={styles.category}>{category?.label}</Text>
           </View>
           <View style={styles.footer}>
             <View style={styles.dateInfo}>

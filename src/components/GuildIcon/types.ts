@@ -1,3 +1,4 @@
 export type GuildIconProps = {
-  uri?: string
+  guildId: string
+  iconId: string | null
 }

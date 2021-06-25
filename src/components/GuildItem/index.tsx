@@ -11,13 +11,13 @@ import { GuildIcon } from '../GuildIcon'
 
 export const GuildItem = (props: GuildItemProps) => {
   const { data, addStyle = {}, ...attrs } = props
-  const { icon, owner, name } = data
+  const { id, icon, owner, name } = data
 
   return (
     <TouchableOpacity {...attrs}>
       <View style={[styles.container, addStyle]}>
         <View style={{ marginRight: RFValue(16) }}>
-          <GuildIcon uri={icon!} />
+          <GuildIcon iconId={icon} guildId={id} />
         </View>
         <View style={styles.content}>
           <Text style={styles.title}>{name}</Text>

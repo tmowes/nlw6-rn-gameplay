@@ -34,13 +34,13 @@ export const styles = StyleSheet.create({
     width: RFValue(56),
     height: RFValue(56),
     borderRadius: RFValue(8),
-    marginRight: RFValue(16),
-    backgroundColor: colors.secondary50,
+    backgroundColor: colors.discord,
   },
   row: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    marginLeft: RFValue(16),
   },
   label: {
     color: colors.text,
